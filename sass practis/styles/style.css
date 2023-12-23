@@ -1,0 +1,19 @@
+header, .contact {
+  height: 50vh;
+  color: rgb(33, 38, 83);
+  background: lightblue;
+}
+header button, .contact button {
+  background: rgb(83, 89, 22);
+}
+header button:hover, .contact button:hover {
+  background: yellow;
+}
+header button::after, .contact button::after {
+  content: "hey there";
+}
+
+.contact {
+  background: pink;
+  height: 20vh;
+}/*# sourceMappingURL=style.css.map */
