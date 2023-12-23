@@ -1,0 +1,30 @@
+body {
+    height: 500vh;
+
+}
+
+.box {
+    background-color: rgb(154, 130, 109);
+    height: 10vh;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    margin: 35%;
+    background-color: rgb(174, 192, 129);
+}
+
+.container {
+    padding: 20px;
+}
+
+.table {
+    text-align: center;
+}
+
+

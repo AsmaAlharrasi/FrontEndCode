@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assest/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <title>Pootstrab Practis</title>
+</head>
+
+<body>
+    <!-------------------- griding ----------------------->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <a href="#Tablecontainer" class="btn btn-secondary">Table</a>
+            </div>
+            <div class="col-1">
+                <a href="#Formcontainer" class="btn btn-danger">Forms</a>
+            </div>
+            <div class="col-1">
+                <a href="#Buttoncontainer" class="btn btn-primary">Buttons</a>
+            </div>
+            <div class="col-1">
+                <a href="#Alertcontainer" class="btn btn-warning">Alerts</a>
+            </div>
+            <div class="col-1">
+                <a href="#Cardcontainer" class="btn btn-info">Cards</a>
+            </div>
+        </div>
+    </div>
+    <h3 style="color: white;">Normal container</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="box">A</div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="box">B</div>
+            </div>
+            <div class="col-4">
+                <div class="box">C</div>
+            </div>
+            <div class="col-4">
+                <div class="box">D</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <!-------------------------Table------------------------------->
+
+    <h3 id="Tablecontainer" style="color: white;">Table container</h3>
+    <div class="container">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr class="table table-danger">
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Job</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asma Alharrasi</td>
+                    <td>22</td>
+                    <td>Trainee at Code Academy</td>
+                    <td>Rustaq</td>
+                </tr>
+                <tr>
+                    <td>Sara Alzadjali</td>
+                    <td>24</td>
+                    <td>Trainee at Code Academy</td>
+                    <td>Muscat</td>
+                </tr>
+                <tr>
+                    <td>Shima Alharrasi</td>
+                    <td>26</td>
+                    <td>Trainee at Code Academy</td>
+                    <td>Sur</td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+
+        </table>
+    </div>
+
+    <br>
+    <hr>
+    <hr><br>
+
+    <!-------------------------Form------------------------------->
+
+    <h3 id= "Formcontainer" style="color: white;">Form container</h3>
+    <form>
+        <div class="container">
+            <div class="row-1">
+
+                <div class="col-4">
+                    <label for="Name" class="form-label">FullName</label>
+                    <input type="text" id="Name" class="form-control">
+                </div>
+
+                <div class="col-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+
+                <div class="col-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+            </div>
+            <br>
+
+            <div class="row-1">
+
+                <div class="col-4">
+                    <label for="color" class="form-label">Color</label>
+                    <input type="color" id="color" class="form-control form-color">
+                </div>
+                <br>
+                <div class="col-4">
+                    <label for="number" class="form-label">Range</label>
+                    <input type="number" class="form-control form-range">
+                </div>
+                <br>
+                <div class="col-4">
+                    <label for="country">Country</label>
+                    <select name="country" id="country" class="form-select">
+                        <option value="">--select your country--</option>
+                        <option value="OM">OM</option>
+                        <option value="UAE">UAE</option>
+                        <option value="SAU">SUA</option>
+                        <option value="KW">KW</option>
+                        <option value="QA">QA</option>
+                        <option value="BA">BA</option>
+                    </select>
+                </div>
+
+                <div class="row-1">
+                    <br>
+                    <div class="col-4">
+                        <div class="form-floating">
+                            <input type="text" id="username" placeholder="UserName" class="form-control">
+                            <label for="username" class="form-label">UserName</label>
+                        </div>
+                    </div>
+
+                    <br>
+                    <div class="col-4">
+                        <label for="amount">Amount</label>
+                        <div class="input-group">
+                            <div class="input-group-text">$</div>
+                            <input id="amount" type="number" class="form-control">
+                            <input id="amount" type="number" class="form-control">
+                            <div class="input-group-text">00</div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="col-4">
+                        <label for="job" class="form-check-label"> full time </label>
+                        <input name="job" id="job" type="checkbox" class="form-check-input form-switch" role="switch">
+                        <br><br>
+                        <input type="submit">
+                    </div>
+                </div>
+
+            </div>
+    </form>
+
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+    <!-------------------------Button------------------------------->
+
+    <h3 id=Buttoncontainer style="color: white;">Button Container</h3>
+    <div class="container">
+        
+            <button class="btn btn-primary">pri</button>
+            <button class="btn btn-link">link</button>
+            <button class="btn btn-warning btn-sm">war-sm</button>
+            <button class="btn btn-outline">outl</button>
+            <button class="btn btn-outline-info" disabled>info-dis-outl</button>
+            <button class="btn btn-outline-info">info-outl</button>
+            <button class="btn btn-success" data-bs-toggle="button">data</button>
+
+            <div class="btn-group">
+                <a href="" class="btn btn-outline-primary"> test</a>
+                <a href="" class="btn btn-outline-primary"> test</a>
+                <a href="" class="btn btn-outline-primary"> test</a>
+            </div>
+
+    </div>
+
+<br><hr><hr><br>
+
+    <!-------------------------Alert------------------------------->
+
+    <h3 id="Alertcontainer" style="color: white;">Alert Container</h3>
+    <div class="container">
+        <div class="alert alert-success alert-dismissible fade show ">Alert
+            <a href="" class="alert-lnik">Go To Find More</a>
+            <button class="btn-close" arial-lable="close" data-bs-dismiss="alert"></button>
+
+        </div>
+    </div>
+
+    <br><hr><hr><br>
+
+    <!-------------------------Card------------------------------->
+
+    <h3 id="Cardcontainer" style="color: white;">Card Container</h3>
+    <div class="container">
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
