@@ -40,7 +40,7 @@ header{
 }
 
 section{
-    padding: 100px 100px;
+    padding: 30px 30px;
 }
 
 .main{
@@ -99,7 +99,7 @@ section{
     font-size: 1.5em;
     padding-right: 1px;
     margin-left: 16px;
-    transition: .7s ease;
+    transition: .3s ease;
 }
 .social-icon a:hover{
     color: #EE7214;
@@ -126,10 +126,10 @@ img{
    justify-content: center;
    flex-direction: row; 
 }
-.cards{
-  background-color: #2b4937f3; 
+/* .cards{
+  background-color: #F7B787; 
 
-}
+} */
 
 .card{
     background-color: #F9E8D9;
@@ -138,6 +138,8 @@ img{
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
+    flex-wrap: wrap;
+    
 }
 
 .card:hover{
@@ -158,15 +160,49 @@ img{
     color: #163020;
     font-size: 1em;
 }
-.card1{
-    font-size: 1.2em;
-}
 
 .list{
     list-style-type:circle; 
     padding: 10px;
 }
 
+#experience .icon{
+    font-size: 2.5em;
+    
+}
+.contact .icon{
+    font-size: 2em;
+}
+
+footer{
+    background-color: #163020;
+    font-weight: 700;
+    font-size: 1em;
+    color: #EE7214;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.social a{
+    color:#e9ebd5 ;
+    font-size: 1em;
+    padding-right: 1px;
+    margin-left: 16px;
+    transition: .1s ease;
+}
+
+.social a:hover{
+    color: #EE7214;
+    transform: scale(1.1);
+    
+}
+
+#aboutme{
+    margin: 0 80px;
+}
 
 
 

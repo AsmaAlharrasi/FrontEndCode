@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+header {
+  background-color: #163020;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 150px;
+}
+header .logo {
+  text-decoration: none;
+  color: #EE7214;
+  font-weight: 700;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+header .navigation a {
+  text-decoration: none;
+  color: #F7B787;
+  font-size: 1em;
+  font-weight: 300;
+  padding-left: 30px;
+}
+header .navigation a:hover {
+  color: #EE7214;
+}
+
+.main {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-color: #F9E8D9;
+}
+.main h2 {
+  color: #163020;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.main h2 span {
+  display: inline-block;
+  margin-top: 30px;
+  color: #EE7214;
+  font-size: 2em;
+  font-weight: 700;
+}
+.main h3 {
+  color: #163020;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 1px;
+  margin-bottom: 30px;
+}
+.main .main-btn {
+  color: #F7B787;
+  background-color: rgba(22, 48, 32, 0.79);
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.937em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  transition: all 0.8s ease;
+}
+.main .main-btn:hover {
+  background-color: #163020;
+  transform: scale(1.1);
+}
+.main .social-icon a {
+  color: #163020;
+  font-size: 1.5em;
+  padding-right: 1px;
+  margin-left: 16px;
+  transition: all 0.8s ease;
+}
+.main .social-icon a:hover {
+  color: #EE7214;
+  transform: scale(1.1);
+}
+.main img {
+  margin-left: 250px;
+  height: 200px;
+  width: 200px;
+}
+
+* {
+  font-family: "Chakra Petch", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 30px 30px;
+}
+
+.card {
+  background-color: #F9E8D9;
+  width: 21em;
+  box-shadow: 0 1px 20px rgb(1, 1, 1);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  flex-wrap: wrap;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: all 0.7s ease;
+}
+.card .icon {
+  color: #163020;
+  font-size: 4em;
+}
+.card .info h3 {
+  color: #EE7214;
+  font-size: 1.2em;
+  font-weight: 2000;
+}
+.card .info p {
+  color: #163020;
+  font-size: 1em;
+}
+.card .list {
+  list-style-type: circle;
+  padding: 10px;
+}
+
+footer {
+  background-color: #163020;
+  font-weight: 700;
+  font-size: 1em;
+  color: #EE7214;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+footer .social a {
+  color: #e9ebd5;
+  font-size: 1em;
+  padding-right: 1px;
+  margin-left: 16px;
+  transition: all 0.1s ease;
+}
+footer .social a:hover {
+  color: #EE7214;
+  transform: scale(1.1);
+}
+
+#aboutme {
+  margin: 0 80px;
+}/*# sourceMappingURL=index.css.map */
