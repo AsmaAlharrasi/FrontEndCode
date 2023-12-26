@@ -60,12 +60,16 @@ button {
     color: #cdbcbc;
     border-radius: 20px;
     transition: .5s;
+    margin: 5px 0;
 }
 
 button:hover {
     background: #020d7486;
     letter-spacing: 2px;
 
+}
+#deleteall{
+   margin: 15px 0; 
 }
 
 .btnsearch {

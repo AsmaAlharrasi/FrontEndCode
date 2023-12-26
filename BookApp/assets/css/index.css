@@ -1,0 +1,17 @@
+.box {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.custom {
+    text-align: center;
+    border-radius: 5px;
+}
+
+#booklist li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10;
+    margin-top: 20px;
+}

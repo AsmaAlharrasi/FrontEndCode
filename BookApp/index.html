@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>BookApp</title>
+</head>
+
+<body class="bg-secondary-subtle">
+    <div class="container my-5 text-light px-5">
+        <div class=" d-flex flex-column bg-dark align-content-center box justify-content-center">
+            <h1 class="text-uppercase"> Asmah BookList</h1>
+            <p>💕 your way to read more 💕</p>
+            <div class="d-flex align-items-center justify-content-center">
+                <input type="text" id="search" placeholder="Search Here!!" class="form-control w-25 m-4">
+                <label for="search" class="form-lable">Search</label>
+            </div>
+        </div>
+
+        <div class="bg-danger box my-4 py-2">
+            <h2>Book List To Read</h2>
+            <div class="d-flex align-items-center justify-content-center">
+                <input type="text" id="bookname" class="form-control w-25 m-4" placeholder="Add mew book">
+                <span id="add" class="btn btn-light text-danger">Add</span>
+                <button id="hide" class="btn btn-light text-danger mx-4">Hide</button>
+            </div>
+
+            <ul id="booklist" class=" mx-5">
+                <li class="my-4">
+                    <span>FirstBook</span>
+                    <button class="btn btn-light text-danger dlt">Delete</button>
+                </li>
+                <li class="my-4">
+                    <span>SecondBook</span>
+                    <button class="btn btn-light text-danger dlt">Delete</button>
+                </li>
+                <li class="my-4">
+                    <span>ThirdBook</span>
+                    <button class="btn btn-light text-danger dlt">Delete</button>
+                </li>
+                <li class="my-4">
+                    <span>ForthBook</span>
+                    <button class="btn btn-light text-danger dlt">Delete</button>
+                </li>
+                <li class="my-4">
+                    <span>FifthBook </span>
+                    <button class="btn btn-light text-danger dlt">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

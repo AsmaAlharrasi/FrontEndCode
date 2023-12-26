@@ -20,13 +20,16 @@ function getTotal() {
     }
 }
 
+
+//-------------------Creat Data-------------------------
+
 let datapro;
 if (localStorage.product != null) {
     datapro = JSON.parse(localStorage.product)
 }
 else {
 
-    let datapro = [];
+    datapro = [];
 }
 submit.onclick = function () {
     let newpro = {
@@ -39,7 +42,88 @@ submit.onclick = function () {
         count: count.value,
         category: category.value
     }
-    datapro.push(newpro);
-    localStorage.setItem('product', JSON.stringify(datapro));
-    console.log(datapro);
+
+    if (newpro.count > 1)
+    {
+        for(let i =0; i<newpro.count;i++)
+        {
+            datapro.push(newpro);
+        }
+    }
+    else{datapro.push(newpro);}
+
+    //---------Sava LocalStorage-------------
+
+    localStorage.setItem('product',   JSON.stringify(datapro));
+    clearData()
+    showData()
+    
 }
+
+//------------------Clear Data--------------------
+
+function clearData()
+{
+    title.value = '';
+    price.value = '';
+    taxes.value = '';
+    ads.value = '';
+    discount.value = '';
+    total.innerHTML = '';
+    count.value = '';
+    category.value = '';
+}
+
+//--------------Read Data-------------------
+function showData()
+{
+    let table = '';
+    for(let i =0; i<datapro.length;i++){
+        table += 
+        ` <tr>
+        <td>${i}</td>
+        <td>${datapro[i].title}</td>
+        <td>${datapro[i].price}</td>
+        <td>${datapro[i].taxes}</td>
+        <td>${datapro[i].ads}</td>
+        <td>${datapro[i].discount}</td>
+        <td>${datapro[i].total}</td>
+        <td>${datapro[i].category}</td>
+        <td><button id="update">update</button></td>
+        <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+    </tr>
+        `
+    }
+
+    document.getElementById('tbody').innerHTML = table;
+    let btndelete = document.getElementById('deleteall');
+    if(datapro.length > 0){
+        btndelete.innerHTML =` <button onclick="deleteAll()">Delete All(${datapro.length})</button>`
+
+    }
+    else{
+        btndelete.innerHTML = '';
+    }
+}
+showData()
+
+//------------------Delet One Product------------------
+
+function deleteData()
+{
+    datapro.splice(i,1);
+    localStorage.product = JSON.stringify(datapro);
+    showData();
+}
+
+//-----------------Delete All Data---------------------
+
+function deleteAll()
+{
+    localStorage.clear()
+    datapro.splice(0)
+    showData()
+}
+
+//--------------Count Data--------------------
+
