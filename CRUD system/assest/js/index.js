@@ -7,6 +7,8 @@ let total = document.getElementById('total');
 let count = document.getElementById('count');
 let category = document.getElementById('category');
 let submit = document.getElementById('submit');
+let mood = 'create';
+let temp;
 
 function getTotal() {
     if (price.value != '') {
@@ -42,6 +44,8 @@ submit.onclick = function () {
         count: count.value,
         category: category.value
     }
+    if (title.value != '' && price.value != '' && category.value !='' && newpro.count < 100 ){
+        if(mood == 'create'){
 
     if (newpro.count > 1)
     {
@@ -50,15 +54,31 @@ submit.onclick = function () {
             datapro.push(newpro);
         }
     }
-    else{datapro.push(newpro);}
+    else
+    {
+        datapro.push(newpro);
+    }
+    }else
+    {
+        datapro[temp]=newpro
+        mood='create';
+        submit.innerHTML = 'Create';
+    }
+    }else
+    {
+        cleardata();
+    }
+        
+
 
     //---------Sava LocalStorage-------------
 
     localStorage.setItem('product',   JSON.stringify(datapro));
     clearData()
     showData()
-    
 }
+    
+    
 
 //------------------Clear Data--------------------
 
@@ -89,7 +109,7 @@ function showData()
         <td>${datapro[i].discount}</td>
         <td>${datapro[i].total}</td>
         <td>${datapro[i].category}</td>
-        <td><button id="update">update</button></td>
+        <td><button onclick="updateData(${i})" id="update">update</button></td>
         <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
     </tr>
         `
@@ -109,7 +129,7 @@ showData()
 
 //------------------Delet One Product------------------
 
-function deleteData()
+function deleteData(i)
 {
     datapro.splice(i,1);
     localStorage.product = JSON.stringify(datapro);
@@ -125,5 +145,90 @@ function deleteAll()
     showData()
 }
 
-//--------------Count Data--------------------
+//--------------Update Data--------------------
+
+function updateData(i){
+    title.value = datapro[i].title;
+    price.value = datapro[i].price;
+    taxes.value = datapro[i].taxes;
+    ads.value = datapro[i].ads;
+    discount.value = datapro[i].discount;
+    getTotal();
+    count.style.display = "none";
+    category.value = datapro[i].category;
+    submit.innerHTML = 'update';
+    mood ='update';
+    temp =i;
+    scroll({
+        top : 0,
+        behavior:'smooth'
+    })
+}
+
+//--------------Search for Data--------------------
+
+let searchmood = 'title';
+
+function getSearchMood(id){
+
+    let search = document.getElementById("search");
+    if(id == 'searchTitle'){
+        searchmood = 'title';
+        search.placeholder = 'search by title';
+    }else{
+        searchmood = 'category';
+        search.placeholder = 'search by category';
+    }
+    search.focus();
+    search.value = '';
+    showData();
+}
+
+function searchData(value){
+    let table = '';
+    if(searchmood == 'title'){
+        
+        for (let i = 0; i < datapro.length; i++) {
+            if(datapro[i].title.includes(value)){
+                table +=`
+            <tr>
+                <td>${i}</td>
+                <td>${datapro[i].title}</td>
+                <td>${datapro[i].price}</td>
+                <td>${datapro[i].taxes}</td>
+                <td>${datapro[i].ads}</td>
+                <td>${datapro[i].discount}</td>
+                <td>${datapro[i].total}</td>
+                <td>${datapro[i].category}</td>
+                <td><button onclick="updateData(${i})" id="update"> update </button></td>
+                <td><button onclick="deleteData (${i})" id="delete"> delete </button></td>
+            </tr>
+        `;
+            }
+        }
+    }else{
+        for (let i = 0; i < datapro.length; i++) {
+            if(datapro[i].category.includes(value)){
+                table +=`
+            <tr>
+                <td>${i}</td>
+                <td>${datapro[i].title}</td>
+                <td>${datapro[i].price}</td>
+                <td>${datapro[i].taxes}</td>
+                <td>${datapro[i].ads}</td>
+                <td>${datapro[i].discount}</td>
+                <td>${datapro[i].total}</td>
+                <td>${datapro[i].category}</td>
+                <td><button onclick="updateData(${i})" id="update"> update </button></td>
+                <td><button onclick="deleteData (${i})" id="delete"> delete </button></td>
+            </tr>
+        `;
+            }
+        }
+    }
+    document.getElementById('tbody').innerHTML = table;
+
+}
+
+
 

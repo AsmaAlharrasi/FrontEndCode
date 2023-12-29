@@ -1,0 +1,90 @@
+body {
+    background-image: url('../image/img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    margin: 3% 25%;
+    padding: 0;
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid #009786;
+    border-bottom: 5px solid #009786;
+    margin-top: 20px;
+    background: #fff;
+}
+
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+h3 {
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    color: #009786;
+    margin: 10px;
+}
+
+.todo-value {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.todo:has(.todo-checkbox:checked){
+    color: #555555;
+    background: #fff;
+    text-decoration: line-through;
+    order: 1;
+    
+}
+
+#time {
+    margin: 0 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: monospace;
+    font-size: 1em;
+    font-weight: 600;
+}

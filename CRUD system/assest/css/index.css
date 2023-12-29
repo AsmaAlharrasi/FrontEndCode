@@ -72,12 +72,12 @@ button:hover {
    margin: 15px 0; 
 }
 
-.btnsearch {
+.search {
     display: flex;
     justify-content: space-between;
 }
 
-.btnsearch button {
+.search button {
     width: 45%;
 
 }

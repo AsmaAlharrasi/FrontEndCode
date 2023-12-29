@@ -1,0 +1,8 @@
+
+{
+    "name" : "Asma",
+    "age" : 22,
+    "number" : 11223344,
+    "skills" : [ "skill1" , "skill2" , "skill3"],
+    "email" : "Asma@gmail.com"
+}
