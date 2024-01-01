@@ -1,0 +1,21 @@
+@import "./variabels";
+@import "./header";
+
+
+.contact{
+    @extend header;
+    background: pink;
+    height: 50vh-30vh;
+}
+
+// .contact{
+//     @include flexcontect(underline);
+//     background: $primarybtn;
+// }
+// h1{
+//     color: $textcolor;
+// }
+// .contact button{
+//     background: #23889a;
+// }
+
